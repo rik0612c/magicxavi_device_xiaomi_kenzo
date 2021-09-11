@@ -355,10 +355,6 @@ PRODUCT_PACKAGES += \
     init.spectrum.rc \
     init.spectrum.sh
 
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0
