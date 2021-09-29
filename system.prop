@@ -221,3 +221,5 @@ ro.max.fling_velocity=40000
 
 # S Bring up
 ro.kernel.ebpf.supported=false
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8956
