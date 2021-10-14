@@ -218,3 +218,6 @@ persist.sys.wfd.virtual=0
 # Higher fling velocities for smooth scrolling and to provide better responsiveness - From HalogenOS Team
 ro.min.fling_velocity=140
 ro.max.fling_velocity=40000
+
+# S Bring up
+ro.kernel.ebpf.supported=false
