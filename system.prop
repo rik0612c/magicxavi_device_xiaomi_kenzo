@@ -225,3 +225,4 @@ ro.soc.model=MSM8956
 debug.renderengine.backend=threaded
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.vndk.version=current
+dalvik.vm.systemuicompilerfilter=speed
