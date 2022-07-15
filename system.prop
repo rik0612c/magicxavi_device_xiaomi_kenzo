@@ -227,3 +227,4 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.vndk.version=current
 dalvik.vm.systemuicompilerfilter=speed
 persist.sys.binary_xml=false
+persist.log.tag.OpenGLRenderer=S
