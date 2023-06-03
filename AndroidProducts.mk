@@ -14,9 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_kenzo.mk
+    $(LOCAL_DIR)/lineage_kenzo.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_kenzo-user \
-    dot_kenzo-userdebug \
-    dot_kenzo-eng
+    lineage_kenzo-userdebug \
+    lineage_kenzo-eng

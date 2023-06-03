@@ -22,11 +22,15 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/kenzo/kenzo-vendor.mk)
+$(call inherit-product, vendor/xiaomi/kenzo/kenzo-vendor.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -135,9 +139,9 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8952 \
     libqomx_core \
-    Camera_Go \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    vendor.qti.hardware.camera.device@1.0_vendor \
+    Snap
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -414,6 +418,14 @@ PRODUCT_PACKAGES += \
     textclassifier.zh.model \
     textclassifier.zh-Hant.model
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.kenzo
+
+# Trust
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
@@ -494,9 +506,9 @@ PRODUCT_COPY_FILES += \
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
-	ro.hdmi.enable=true \
-	ro.hdmi.mirror.enable=true \
-	persist.sys.wfd.virtual=0
+    ro.hdmi.enable=true \
+    ro.hdmi.mirror.enable=true \
+    persist.sys.wfd.virtual=0
 
 # USB debugging
 PRODUCT_PROPERTY_OVERRIDES += \
