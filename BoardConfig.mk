@@ -18,7 +18,12 @@
 DEVICE_PATH := device/xiaomi/kenzo
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
-ALLOW_MISSING_DEPENDENCIES := true
+#ALLOW_MISSING_DEPENDENCIES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+RELAX_USES_LIBRARY_CHECK := true
+LOCAL_CHECK_ELF_FILES := false
 
 # Architecture
 TARGET_ARCH := arm64
@@ -168,7 +173,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bo
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
@@ -255,6 +260,3 @@ VENDOR_SECURITY_PATCH := 2017-01-01
 
 # Inherit from the proprietary version
 include vendor/xiaomi/kenzo/BoardConfigVendor.mk
-
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
