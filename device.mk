@@ -140,8 +140,7 @@ PRODUCT_PACKAGES += \
     camera.msm8952 \
     libqomx_core \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor \
-    Snap
+    vendor.qti.hardware.camera.device@1.0_vendor
 
 # Component overrides
 PRODUCT_COPY_FILES += \
