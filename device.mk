@@ -194,7 +194,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprint.msm8952 \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_kenzo
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 # Filesystem tools
 PRODUCT_PACKAGES += \
