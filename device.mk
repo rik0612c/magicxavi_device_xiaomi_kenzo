@@ -417,15 +417,7 @@ PRODUCT_PACKAGES += \
     textclassifier.tr.model \
     textclassifier.zh.model \
     textclassifier.zh-Hant.model
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.kenzo
-
-# Trust
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
+    
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
