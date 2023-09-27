@@ -518,3 +518,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.data.iwlan.enable=true \
      ro.telephony.iwlan_operation_mode=legacy
+     
+# RP
+PRODUCT_PACKAGES += RemovePackages
